@@ -17,10 +17,10 @@ def obtener_fecha_dia(fecha):
     dia_es = dias[dia]
     return fecha.strftime("%d-%m-%Y"), dia_es
 
-# Lee el archivo /home/joni/Documentos/vida/calendario.txt y guarda los eventos existentes
+# Lee el archivo /ruta/calendario.txt y guarda los eventos existentes
 eventos = {}
 try:
-    with open("/home/joni/Documentos/vida/calendario.txt", "r") as f:
+    with open("/ruta/vida/calendario.txt", "r") as f:
         for linea in f:
             linea = linea.strip()
             if linea:  # Verifica que la línea no esté vacía
@@ -51,8 +51,8 @@ if evento:
     if evento not in eventos[fecha]:
         eventos[fecha].add(evento)
 
-# Escribe los eventos en el archivo /home/joni/Documentos/vida/calendario.txt
-with open("/home/joni/Documentos/vida/calendario.txt", "w") as f:
+# Escribe los eventos en el archivo /ruta/vida/calendario.txt
+with open("/ruta/vida/calendario.txt", "w") as f:
     for fecha in sorted(eventos):
         f.write(f"{fecha} {dia}\n")
         for evento in sorted(eventos[fecha]):
