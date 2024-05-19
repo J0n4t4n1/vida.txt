@@ -9,22 +9,22 @@ Puedes añadir un alias a tu archivo ~/.bashrc para ejecutar tu script main.py m
 
 1. Abre tu archivo ~/.bashrc con tu editor de texto preferido. Por ejemplo, puedes usar nano:
 
-  sudo nano ~/.bashrc
+ > sudo nano ~/.bashrc
 
 2. Añade la siguiente línea al final de tu archivo ~/.bashrc, reemplazando /ruta/a/tu/main.py con la ruta completa a tu script main.py:
 
-  alias miEvento='python3 /ruta/a/tu/main.py'
+>  alias miEvento='python3 /ruta/a/tu/main.py'
 
 3. Guarda los cambios y cierra el editor. Si estás usando nano, puedes hacer esto presionando Ctrl+X, luego Y para confirmar los cambios, y finalmente Enter para salir.
 
 4. Para que los cambios surtan efecto, debes ejecutar el siguiente comando:
 
-  source ~/.bashrc
+>  source ~/.bashrc
 
 Ahora puedes usar el comando miEvento en tu terminal para ejecutar tu script main.py. Por ejemplo:
 
-  miEvento 'Pasear con mi novia'
+>  miEvento 'Pasear con mi novia'
 
 o
 
-  miEvento '18-05-2024' 'Pasear con mi novia'
+>  miEvento '18-05-2024' 'Pasear con mi novia'
