@@ -51,9 +51,11 @@ if evento:
     if evento not in eventos[fecha]:
         eventos[fecha].add(evento)
 
-# Escribe los eventos en el archivo /ruta/vida/calendario.txt
-with open("/ruta/vida/calendario.txt", "w") as f:
+# Escribe los eventos en el archivo /home/joni/Documentos/vida/calendario.txt
+with open("/home/joni/Documentos/vida/calendario.txt", "w") as f:
     for fecha in sorted(eventos):
+        fecha_datetime = datetime.datetime.strptime(fecha, "%d-%m-%Y")
+        fecha, dia = obtener_fecha_dia(fecha_datetime)
         f.write(f"{fecha} {dia}\n")
         for evento in sorted(eventos[fecha]):
             f.write(f"+ {evento}\n")
